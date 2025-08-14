@@ -73,10 +73,19 @@ body {
   margin-bottom: 32px;
 }
 
+
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 ustun */
   gap: 24px;
+}
+
+.product-image {
+  width: 100%; /* ustunga moslab kenglik */
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.2s ease;
 }
 
 /* Product Card */
@@ -90,13 +99,6 @@ body {
   position: relative;
 }
 
-.product-image {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: opacity 0.2s ease;
-}
 
 .product-image-placeholder {
   width: 100%;
@@ -126,7 +128,7 @@ body {
 
 .add-to-cart-btn {
   position: absolute;
-  bottom: -20px;
+  bottom: -24px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -142,6 +144,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
+  margin-bottom: 16px;
 }
 
 .add-to-cart-btn:hover {
